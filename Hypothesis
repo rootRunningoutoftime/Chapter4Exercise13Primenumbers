@@ -1,0 +1,65 @@
+
+
+#include <iostream>
+#include <vector>
+#include <math.h>
+
+int main() {
+/*
+//declarations This is where the get ready starts 
+char response;
+//prompting the user
+bool keep_going = true;
+std::cout << "Would you like to see all the prime numbers between 0 and 100" << std::endl;
+std::cin >> response;
+if (response == 'y') { // This is where the "Get ready" phase ends 
+  //declaration, this is where the phase " reserve some memory" starts 
+  std::vector<int>prime;
+  std::vector<int>all_numbers;
+  std::vector<int>choplist; // multiply current prime of each number of al_numbers, add the result to the choplist
+                            // after all the multiplication is done, remove each entry in chop_list from all_numbers,
+                            // empty choplist
+
+  for (int n = 3; n < 50; n++) {
+     bool is_prime = true;
+     int currentprimenumber = 0;
+     prime.push_back(2);
+          for (int a = 0; a < prime.size(); ++a) {
+          //This is the current prime numbers array  in actuality i was doing check every number from 1 to 100 and see if this prime is a factor   
+          currentprimenumber = prime[a];
+              if (n * currentprimenumber) {
+              all_numbers.push_back(n);
+                   } // if statement for the n*currentprimenumber
+          for (int b = 0; b < all_numbers.size(); ++b) {
+              choplist.push_back(b);
+          for (int i = 0; i < choplist.size(); ++i)
+              if (currentprimenumber % choplist[i] == 0) {
+                      is_prime = false;
+                     // std::cout << "Sorry" << std::endl;
+                      choplist.erase(choplist.begin() + 1, choplist.begin() + 3); // //removes 1,2 index elements
+                      int square(int x) {
+                          return x * x;
+                      }
+               }
+              if(is_prime) {
+                      prime.push_back(a);
+                      std::cout << a << std::endl;
+                  }//if(is_prime)
+          }//for( int i = 0; i < choplist.size(); ++i)
+      } //for (int i = 0; i < prime.size(); ++i)
+  }//for(int n =3;n<50;n++)
+}//if(response ==y) */
+std::vector<int>all_numbers;
+for (int n = 3; n < 50; n++) {
+  //int currentprimenumber = 2;
+  for (int a = 0; a < 10; ++a) {
+      int currentprimenumber = a;
+      //std::vector<int>all_numbers;  Remind myself to change this one 
+       // if (n*currentprimenumber) Remind myself to change this one 
+      all_numbers.push_back(n * currentprimenumber);
+      for (int o : all_numbers)
+          std::cout << o << std::endl;
+      //} // if(n*currentprimenumber)
+  } // for (int a = 0; a < 50; ++a) 
+}//for (int n = 3; n < 50; n++)
+                                  } // int main()
